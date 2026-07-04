@@ -78,6 +78,22 @@
     sections.forEach(function (s) { sectionObserver.observe(s); });
   }
 
+  // iOS "notify me" form — no backend; opens a prefilled mail draft
+  var notify = document.getElementById("notify-form");
+  if (notify) {
+    notify.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var input = notify.querySelector("input[type=email]");
+      var email = input && input.value ? input.value.trim() : "";
+      var to = notify.getAttribute("data-to") || "hello@dokodocs.app";
+      var subject = encodeURIComponent("Notify me when DokoDocs for iOS launches");
+      var body = encodeURIComponent(
+        "Please let me know when the iOS app is available.\n\nMy email: " + email
+      );
+      window.location.href = "mailto:" + to + "?subject=" + subject + "&body=" + body;
+    });
+  }
+
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 })();
