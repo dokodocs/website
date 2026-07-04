@@ -41,8 +41,8 @@ A few values are placeholders pending real accounts/domain (per
 - **Social links**: GitHub/X/Instagram/LinkedIn URLs in the header, footer,
   and download section use the handles the launch kit recommends
   (`dokodocs`) — confirm each account was actually claimed before publishing.
-- **Contact email**: `hello@dokodocs.com` in `privacy.html`/`terms.html` is a
-  placeholder — point it at a real inbox.
+- **Contact email**: `dokodocsnepal@gmail.com` is wired into
+  `privacy.html`, `terms.html`, and the iOS notify form.
 - **Download section**: both store badges are intentionally in a
   "coming soon" state — the app has no published Play Store or App Store
   listing yet (see `docs/github readme.txt`, status: MVP in development).
