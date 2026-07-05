@@ -94,6 +94,60 @@
     });
   }
 
+  // Contact form -> Google Apps Script Web App (writes to the Sheet)
+  var cform = document.getElementById("contact-form");
+  if (cform) {
+    var status = document.getElementById("cf-status");
+    var submitBtn = document.getElementById("cf-submit");
+    var setStatus = function (msg, cls) {
+      if (!status) return;
+      status.textContent = msg;
+      status.className = "form-status" + (cls ? " " + cls : "");
+    };
+    cform.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var endpoint = cform.getAttribute("data-endpoint") || "";
+      // Honeypot: silently drop bot submissions
+      var hp = cform.querySelector('input[name="_gotcha"]');
+      if (hp && hp.value) return;
+      if (!cform.checkValidity()) {
+        cform.reportValidity();
+        return;
+      }
+      if (!endpoint || endpoint.indexOf("PASTE_") === 0) {
+        setStatus(
+          "Form isn't connected yet. Please email dokodocsnepal@gmail.com for now.",
+          "err"
+        );
+        return;
+      }
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending…";
+      }
+      setStatus("Sending…", "");
+      fetch(endpoint, { method: "POST", body: new FormData(cform) })
+        .then(function () {
+          // Apps Script returns an opaque (no-CORS-friendly) response; treat
+          // a completed request as success.
+          setStatus("Thanks! Your message has been received. 🙏", "ok");
+          cform.reset();
+        })
+        .catch(function () {
+          setStatus(
+            "Something went wrong. Please try again, or email dokodocsnepal@gmail.com.",
+            "err"
+          );
+        })
+        .finally(function () {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Send message";
+          }
+        });
+    });
+  }
+
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 })();

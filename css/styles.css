@@ -763,6 +763,63 @@ a.store-badge:hover {
   font-size: 0.95rem;
 }
 
+/* ---------- Contact form ---------- */
+.contact-form {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1.1rem;
+  max-width: 560px;
+}
+.contact-form .field {
+  display: grid;
+  gap: 0.4rem;
+}
+.contact-form label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+.contact-form label span {
+  color: var(--bamboo);
+}
+.contact-form input,
+.contact-form textarea {
+  font: inherit;
+  color: var(--ink);
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.7rem 0.9rem;
+  width: 100%;
+  resize: vertical;
+}
+.contact-form input:focus-visible,
+.contact-form textarea:focus-visible {
+  outline: 3px solid var(--teal-light);
+  border-color: var(--teal);
+}
+.contact-form .hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+.contact-form button {
+  justify-self: start;
+}
+.form-status {
+  margin: 0;
+  font-size: 0.94rem;
+  min-height: 1.2em;
+}
+.form-status.ok {
+  color: var(--success);
+}
+.form-status.err {
+  color: var(--error);
+}
+
 /* ---------- Contact page ---------- */
 .contact-grid {
   display: grid;

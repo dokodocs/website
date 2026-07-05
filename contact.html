@@ -40,8 +40,29 @@
     <div class="container doc">
       <span class="eyebrow">Contact</span>
       <h1>Get in touch.</h1>
-      <p class="lead">DokoDocs is built in the open, and your input shapes it. Questions, bug reports, ideas — <strong>feedback is more than welcome.</strong> Reach us whichever way is easiest for you.</p>
+      <p class="lead">DokoDocs is built in the open, and your input shapes it. Questions, bug reports, ideas — <strong>feedback is more than welcome.</strong> Drop us a message below, or reach us directly.</p>
 
+      <!-- Replace data-endpoint with your Google Apps Script Web App URL (ends in /exec) -->
+      <form id="contact-form" class="contact-form" data-endpoint="PASTE_APPS_SCRIPT_EXEC_URL_HERE" novalidate>
+        <div class="field">
+          <label for="cf-email">Email <span aria-hidden="true">*</span></label>
+          <input type="email" id="cf-email" name="email" required autocomplete="email" placeholder="you@example.com">
+        </div>
+        <div class="field">
+          <label for="cf-mobile">Mobile number</label>
+          <input type="tel" id="cf-mobile" name="mobilenumber" autocomplete="tel" placeholder="+977 …">
+        </div>
+        <div class="field">
+          <label for="cf-message">Message / feedback <span aria-hidden="true">*</span></label>
+          <textarea id="cf-message" name="message" rows="5" required placeholder="Tell us what's on your mind…"></textarea>
+        </div>
+        <!-- Honeypot: hidden from humans, catches bots -->
+        <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn--primary" type="submit" id="cf-submit">Send message</button>
+        <p class="form-status" id="cf-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <h2 style="margin-top:2.75rem;">Prefer to reach us directly?</h2>
       <div class="contact-grid">
         <a class="contact-card" href="https://wa.me/9779860793050?text=Hi%20DokoDocs%20team%2C%20I%20have%20some%20feedback%3A" target="_blank" rel="noopener">
           <div class="icon" aria-hidden="true">
