@@ -763,6 +763,65 @@ a.store-badge:hover {
   font-size: 0.95rem;
 }
 
+/* ---------- Contact page ---------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+.contact-card {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.4rem;
+  color: var(--ink);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.contact-card:hover {
+  text-decoration: none;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+  border-color: #d3ded9;
+}
+.contact-card .icon {
+  flex: 0 0 auto;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: rgba(46, 125, 107, 0.1);
+  color: var(--teal);
+}
+.contact-card .icon svg {
+  width: 24px;
+  height: 24px;
+}
+.contact-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.2rem;
+}
+.contact-card p {
+  color: var(--muted);
+  font-size: 0.94rem;
+  margin: 0 0 0.5rem;
+  word-break: break-word;
+}
+.contact-card .contact-link {
+  color: var(--teal-dark);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+@media (max-width: 720px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---------- Reveal animation ---------- */
 .reveal {
   opacity: 0;
