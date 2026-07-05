@@ -59,6 +59,17 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden; /* guard against any accidental horizontal scroll */
+}
+/* Never let a long word/URL push the layout wider than the screen */
+h1,
+h2,
+h3,
+p,
+li,
+a,
+span {
+  overflow-wrap: break-word;
 }
 img,
 svg {
@@ -703,6 +714,19 @@ a.store-badge:hover {
   padding-top: 1.5rem;
   color: #9aa5a1;
   font-size: 0.88rem;
+}
+/* Simple text links used in the mini footer on sub-pages */
+.footer-mini-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.1rem;
+}
+.footer-mini-links a {
+  color: #c9d1ce;
+  font-size: 0.9rem;
+}
+.footer-mini-links a:hover {
+  color: #fff;
 }
 .footer-social {
   display: flex;
