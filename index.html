@@ -227,11 +227,13 @@
           <img src="assets/badges/app-store.svg" width="182" height="54" alt="Coming soon to the Apple App Store">
         </span>
       </div>
-      <form class="notify" id="notify-form" data-to="dokodocsnepal@gmail.com" novalidate>
+      <form class="notify" id="notify-form" data-endpoint="https://script.google.com/macros/s/AKfycbylgMJr9AKDeUN8vlrn3AeEKiZcGUdXJWtno1xNynWfxKNHTKaLt_HONI4ILog-33qx/exec" novalidate>
         <label class="sr-only" for="notify-email">Email address for iOS launch notification</label>
         <input type="email" id="notify-email" name="email" placeholder="Email me when iOS launches" required autocomplete="email">
+        <input type="hidden" name="message" value="ios waiting">
         <button class="btn btn--primary" type="submit">Notify me</button>
       </form>
+      <p class="form-status" id="notify-status" role="status" aria-live="polite" style="text-align:center;margin-top:0.75rem;"></p>
       <p class="download-note">Want it sooner? <a href="https://github.com/dokodocs">Clone the source and build it yourself</a> — it's open-source.</p>
     </div>
   </section>

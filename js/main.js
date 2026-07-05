@@ -78,19 +78,47 @@
     sections.forEach(function (s) { sectionObserver.observe(s); });
   }
 
-  // iOS "notify me" form — no backend; opens a prefilled mail draft
+  // iOS "notify me" form — posts to the same Google Sheet endpoint,
+  // tagged message = "ios waiting" so it's distinguishable in the sheet.
   var notify = document.getElementById("notify-form");
   if (notify) {
+    var nStatus = document.getElementById("notify-status");
+    var nBtn = notify.querySelector("button[type=submit]");
+    var setN = function (msg, cls) {
+      if (!nStatus) return;
+      nStatus.textContent = msg;
+      nStatus.className = "form-status" + (cls ? " " + cls : "");
+    };
     notify.addEventListener("submit", function (e) {
       e.preventDefault();
-      var input = notify.querySelector("input[type=email]");
-      var email = input && input.value ? input.value.trim() : "";
-      var to = notify.getAttribute("data-to") || "hello@dokodocs.app";
-      var subject = encodeURIComponent("Notify me when DokoDocs for iOS launches");
-      var body = encodeURIComponent(
-        "Please let me know when the iOS app is available.\n\nMy email: " + email
-      );
-      window.location.href = "mailto:" + to + "?subject=" + subject + "&body=" + body;
+      var endpoint = notify.getAttribute("data-endpoint") || "";
+      if (!notify.checkValidity()) {
+        notify.reportValidity();
+        return;
+      }
+      if (!endpoint || endpoint.indexOf("PASTE_") === 0) {
+        setN("Couldn't submit right now — email dokodocsnepal@gmail.com.", "err");
+        return;
+      }
+      if (nBtn) {
+        nBtn.disabled = true;
+        nBtn.textContent = "Sending…";
+      }
+      setN("Sending…", "");
+      fetch(endpoint, { method: "POST", body: new FormData(notify) })
+        .then(function () {
+          setN("Thanks! We'll email you when iOS launches. 🙏", "ok");
+          notify.reset(); // clears email; hidden message resets to "ios waiting"
+        })
+        .catch(function () {
+          setN("Something went wrong. Please try again.", "err");
+        })
+        .finally(function () {
+          if (nBtn) {
+            nBtn.disabled = false;
+            nBtn.textContent = "Notify me";
+          }
+        });
     });
   }
 
