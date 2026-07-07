@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why We Chose Open Source (Apache 2.0) — DokoDocs Blog</title>
+<meta name="description" content="Trust should be verifiable, not assumed. Why DokoDocs publishes every line of code, why the Apache 2.0 license balances openness with commercial adoption, and how open source and business coexist.">
+<meta name="keywords" content="Apache 2.0 license, open source document scanner, verifiable privacy, open source business model, Flutter open source app, DokoDocs">
+<link rel="canonical" href="https://dokodocs.com/blog/why-open-source-apache-2-0.html">
+<meta name="theme-color" content="#2E7D6B">
+<link rel="icon" type="image/svg+xml" href="../assets/logo/logo_dokodocs.svg">
+<link rel="alternate icon" href="../assets/logo/mark.png">
+<link rel="apple-touch-icon" href="../assets/logo/mark.png">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DokoDocs">
+<meta property="og:title" content="Why We Chose Open Source (Apache 2.0)">
+<meta property="og:description" content="Trust should be something people can verify, not something they have to assume. Why we publish every line of DokoDocs.">
+<meta property="og:image" content="https://dokodocs.com/assets/illustrations/onboard_own.png">
+<meta property="og:url" content="https://dokodocs.com/blog/why-open-source-apache-2-0.html">
+<meta property="article:published_time" content="2026-07-07">
+<meta property="article:author" content="DokoDocs Team">
+<meta property="article:tag" content="Open Source">
+<meta property="article:tag" content="Apache 2.0">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why We Chose Open Source (Apache 2.0)">
+<meta name="twitter:description" content="Trust should be verifiable, not assumed. Why DokoDocs is fully open source under Apache 2.0.">
+<meta name="twitter:image" content="https://dokodocs.com/assets/illustrations/onboard_own.png">
+
+<link rel="stylesheet" href="../css/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Why We Chose Open Source (Apache 2.0)",
+  "description": "Why DokoDocs publishes every line of code, and why the Apache 2.0 license balances openness with commercial adoption.",
+  "image": "https://dokodocs.com/assets/illustrations/onboard_own.png",
+  "author": { "@type": "Organization", "name": "DokoDocs Team", "url": "https://dokodocs.com/" },
+  "publisher": { "@type": "Organization", "name": "DokoDocs", "logo": { "@type": "ImageObject", "url": "https://dokodocs.com/assets/logo/mark.png" } },
+  "datePublished": "2026-07-07",
+  "dateModified": "2026-07-07",
+  "mainEntityOfPage": "https://dokodocs.com/blog/why-open-source-apache-2-0.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dokodocs.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://dokodocs.com/blog.html" },
+    { "@type": "ListItem", "position": 3, "name": "Why We Chose Open Source (Apache 2.0)", "item": "https://dokodocs.com/blog/why-open-source-apache-2-0.html" }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" id="site-header">
+  <nav class="nav" aria-label="Primary">
+    <a class="brand" href="../index.html">
+      <img src="../assets/logo/logo_dokodocs.svg" width="34" height="34" alt="" loading="eager">
+      <span><span class="brand-doko">Doko</span>Docs</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="../index.html#features">Features</a></li>
+      <li><a href="../index.html#how-it-works">How it Works</a></li>
+      <li><a href="../index.html#why">Why DokoDocs</a></li>
+      <li><a href="../blog.html" class="active">Blog</a></li>
+      <li><a href="../index.html#download">Download</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li class="nav-cta"><a class="btn btn--primary" href="https://github.com/dokodocs">View on GitHub</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+  <article class="section post">
+    <div class="container doc">
+      <div class="post-meta">
+        <span class="tag">Open Source</span>
+        <span class="tag">Apache 2.0</span>
+        <time datetime="2026-07-07">July 7, 2026</time>
+        <span>·</span>
+        <span>6 min read</span>
+      </div>
+      <h1>Why We Chose Open Source (Apache 2.0)</h1>
+      <p class="lead">At DokoDocs, one of our core promises is simple: <strong>your documents belong to you.</strong> That philosophy extends beyond how the app stores your files — it also shapes how we build the software itself.</p>
+
+      <div class="post-hero">
+        <img src="../assets/illustrations/onboard_own.png" width="1080" height="527" alt="A person carrying a doko basket full of documents toward a small home server they own, away from a generic cloud." loading="eager">
+      </div>
+
+      <p>From day one, we decided that DokoDocs would be open source. Not because it's trendy. Not because it's easier.</p>
+      <blockquote>Because trust should be something people can verify, not something they have to assume.</blockquote>
+
+      <h2>Trust through transparency</h2>
+      <p>When you scan important documents — citizenship certificates, passports, contracts, tax records, medical reports, or academic transcripts — you deserve to know what the software is doing. With proprietary applications, users can only rely on the company's claims. With open source, anyone can inspect the code:</p>
+      <ul>
+        <li>Developers can verify how documents are processed.</li>
+        <li>Security researchers can audit the application.</li>
+        <li>Organizations can perform their own security reviews before deployment.</li>
+      </ul>
+      <p>Transparency doesn't automatically make software secure, but it allows security to be <em>verified</em> instead of simply trusted.</p>
+
+      <h2>Privacy should be verifiable</h2>
+      <p>Many applications promise privacy. Few allow users to confirm those promises. DokoDocs processes documents locally by default — and because the source code is public, anyone can review how documents are scanned, where files are stored, how optional synchronization works, what information leaves the device, and what permissions the app requests.</p>
+      <blockquote>Privacy should be visible in the code — not just written in marketing materials.</blockquote>
+
+      <h2>Why Apache License 2.0?</h2>
+      <p>There are many excellent open-source licenses. After careful consideration, we chose the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a> because it provides a practical balance between openness and commercial adoption. It allows individuals, startups, governments, universities, NGOs, and businesses to:</p>
+      <ul>
+        <li>use DokoDocs for personal or commercial purposes,</li>
+        <li>modify the software and distribute their own versions,</li>
+        <li>integrate it into larger systems, and</li>
+        <li>build commercial products on top of it —</li>
+      </ul>
+      <p>without requiring every downstream project to become open source. The license also includes an explicit <strong>patent grant</strong>, giving adopting organizations additional legal clarity. That makes Apache 2.0 one of the most business- and enterprise-friendly open-source licenses available.</p>
+
+      <figure>
+        <svg viewBox="0 0 760 330" role="img" aria-labelledby="fig2-title" xmlns="http://www.w3.org/2000/svg">
+          <title id="fig2-title">What the Apache 2.0 license permits: commercial use, modification, distribution, integration, and patent grant — without copyleft obligations.</title>
+          <style>
+            .h2s { font: 600 16px system-ui, sans-serif; fill: #14312b; }
+            .t2 { font: 400 12.5px system-ui, sans-serif; fill: #45564f; }
+            .b2 { font: 600 13px system-ui, sans-serif; fill: #2E7D6B; }
+            .cell { fill: #fff; stroke: #d8e2de; rx: 10; }
+            .core { fill: #eaf4f0; stroke: #2E7D6B; rx: 12; }
+          </style>
+          <text x="380" y="32" text-anchor="middle" class="h2s">What Apache 2.0 means for you</text>
+          <rect x="280" y="130" width="200" height="70" class="core"/>
+          <text x="380" y="160" text-anchor="middle" class="b2">DokoDocs core</text>
+          <text x="380" y="180" text-anchor="middle" class="t2">Apache 2.0 · always open</text>
+
+          <rect x="40" y="60" width="180" height="56" class="cell"/>
+          <text x="130" y="84" text-anchor="middle" class="b2">✓ Commercial use</text>
+          <text x="130" y="102" text-anchor="middle" class="t2">personal or business</text>
+
+          <rect x="540" y="60" width="180" height="56" class="cell"/>
+          <text x="630" y="84" text-anchor="middle" class="b2">✓ Modify &amp; fork</text>
+          <text x="630" y="102" text-anchor="middle" class="t2">ship your own version</text>
+
+          <rect x="40" y="214" width="180" height="56" class="cell"/>
+          <text x="130" y="238" text-anchor="middle" class="b2">✓ Integrate</text>
+          <text x="130" y="256" text-anchor="middle" class="t2">into larger systems</text>
+
+          <rect x="540" y="214" width="180" height="56" class="cell"/>
+          <text x="630" y="238" text-anchor="middle" class="b2">✓ Patent grant</text>
+          <text x="630" y="256" text-anchor="middle" class="t2">explicit legal clarity</text>
+
+          <line x1="220" y1="95" x2="290" y2="140" stroke="#7b8c85" stroke-width="1.5"/>
+          <line x1="540" y1="95" x2="470" y2="140" stroke="#7b8c85" stroke-width="1.5"/>
+          <line x1="220" y1="238" x2="290" y2="192" stroke="#7b8c85" stroke-width="1.5"/>
+          <line x1="540" y1="238" x2="470" y2="192" stroke="#7b8c85" stroke-width="1.5"/>
+
+          <text x="380" y="308" text-anchor="middle" class="t2">No copyleft obligation — downstream projects don't have to open-source their own code.</text>
+        </svg>
+        <figcaption>Figure 1 — Apache 2.0 keeps the core open while staying friendly to businesses, governments, and integrators.</figcaption>
+      </figure>
+
+      <h2>Open source doesn't mean "no business"</h2>
+      <p>A common misconception is that open source and sustainable business can't coexist. In reality, many successful technology companies are built around open-source software, and our long-term vision follows a similar approach. The core DokoDocs application will remain open source, while organizations that need more may choose optional commercial offerings in the future: managed deployment, enterprise support, white-label customization, advanced administration, enterprise integrations, and professional consulting.</p>
+      <p>This lets everyone benefit from an open foundation while helping fund long-term development.</p>
+
+      <h2>Built with the community</h2>
+      <p>Open source is more than publishing code — it's about collaboration. We welcome contributions from people of all experience levels: fixing bugs, improving documentation, translating the application, enhancing accessibility, improving performance, designing icons and interfaces, reviewing code, reporting security issues, or suggesting new features.</p>
+      <p>Whether it's your first pull request or your thousandth, every contribution improves DokoDocs for everyone.</p>
+
+      <h2>Supporting education</h2>
+      <p>We also hope DokoDocs becomes a learning resource. Students can explore a real-world Flutter application, universities can use it in software engineering courses, and new contributors can gain experience on production-quality open-source software. If DokoDocs helps someone learn, grow, or begin contributing to open source, we've achieved something valuable beyond building an app.</p>
+
+      <h2>Our commitment</h2>
+      <p>Open source also means accountability. We commit to maintaining a public source repository, documenting major architectural decisions, responding to community feedback, reviewing pull requests fairly, acknowledging contributors, publishing security fixes openly, and keeping the core application freely available.</p>
+      <blockquote>Great software isn't built by one company. It's built by a community.</blockquote>
+      <p>Whether you're a developer, designer, translator, security researcher, student, or someone who simply believes users should control their own data — <a href="https://github.com/dokodocs">there's a place for you in this community</a>.</p>
+
+      <div class="share-row">
+        <span class="share-label">Share this article:</span>
+        <a class="share-btn" href="https://twitter.com/intent/tweet?text=Why%20DokoDocs%20chose%20open%20source%20(Apache%202.0)&amp;url=https%3A%2F%2Fdokodocs.com%2Fblog%2Fwhy-open-source-apache-2-0.html&amp;via=dokodocs" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2h3.3l-7.2 8.2L23.6 22h-6.8l-5.3-6.9L5.2 22H1.9l7.7-8.8L1 2h6.9l4.8 6.3L18.9 2Z"/></svg>X</a>
+        <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdokodocs.com%2Fblog%2Fwhy-open-source-apache-2-0.html" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 22v-8.1h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.6 1.6-1.6h1.7V4.2c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.4v3.2h2.7V22h3.4Z"/></svg>Facebook</a>
+        <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fdokodocs.com%2Fblog%2Fwhy-open-source-apache-2-0.html" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-.98 1.83-2 3.76-2 4.02 0 4.76 2.5 4.76 5.76V21h-4v-5.6c0-1.34-.02-3.07-1.88-3.07-1.88 0-2.17 1.46-2.17 2.97V21h-4V9Z"/></svg>LinkedIn</a>
+        <a class="share-btn" href="https://wa.me/?text=Why%20DokoDocs%20chose%20Apache%202.0%3A%20https%3A%2F%2Fdokodocs.com%2Fblog%2Fwhy-open-source-apache-2-0.html" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Z"/></svg>WhatsApp</a>
+        <a class="share-btn" href="mailto:?subject=Why%20DokoDocs%20chose%20Apache%202.0&amp;body=Worth%20a%20read%3A%20https%3A%2F%2Fdokodocs.com%2Fblog%2Fwhy-open-source-apache-2-0.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email</a>
+      </div>
+
+      <div class="post-nav">
+        <a class="btn btn--ghost" href="why-dokodocs.html">&larr; Prev: Why DokoDocs?</a>
+        <a class="btn btn--primary" href="the-vision-of-dokodocs.html">Next: The Vision &rarr;</a>
+      </div>
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>&copy; <span id="year">2026</span> DokoDocs. Made with care in Nepal.</span>
+      <nav class="footer-mini-links" aria-label="Footer">
+        <a href="../index.html">Home</a>
+        <a href="../blog.html">Blog</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

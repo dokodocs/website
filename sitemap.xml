@@ -6,6 +6,29 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://dokodocs.com/blog.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dokodocs.com/blog/why-dokodocs.html</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dokodocs.com/blog/why-open-source-apache-2-0.html</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dokodocs.com/blog/the-vision-of-dokodocs.html</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://dokodocs.com/contact.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
