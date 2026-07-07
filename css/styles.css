@@ -1036,7 +1036,7 @@ a.store-badge:hover {
 }
 .blog-card img {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 21 / 9;
   object-fit: cover;
   display: block;
 }
@@ -1172,7 +1172,7 @@ a.store-badge:hover {
 
 /* ---------- Blog divider ---------- */
 .post-divider {
-  margin: 2.75rem auto;
+  margin: 0 auto 2.25rem;
   max-width: 560px;
 }
 .post-divider img {
