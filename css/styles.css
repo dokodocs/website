@@ -1036,8 +1036,7 @@ a.store-badge:hover {
 }
 .blog-card img {
   width: 100%;
-  aspect-ratio: 21 / 9;
-  object-fit: cover;
+  height: auto;
   display: block;
 }
 .blog-card-body {
