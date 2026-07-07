@@ -1075,6 +1075,7 @@ a.store-badge:hover {
 }
 .post-hero img {
   width: 100%;
+  height: auto;
   display: block;
 }
 .post figure {
