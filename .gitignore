@@ -2,5 +2,8 @@
 .DS_Store
 Thumbs.db
 
-# Internal brand/product docs — not for the public site
-docs/
+# Internal brand/product docs — ignore only text docs, keep docs/assets tracked
+docs/*.md
+docs/**/*.md
+docs/*.docx
+docs/**/*.docx

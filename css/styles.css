@@ -1169,3 +1169,15 @@ a.store-badge:hover {
     grid-template-columns: 1fr;
   }
 }
+
+/* ---------- Blog divider ---------- */
+.post-divider {
+  margin: 2.75rem auto;
+  max-width: 560px;
+}
+.post-divider img {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0.85;
+}
