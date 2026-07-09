@@ -1,77 +1,100 @@
-# DokoDocs Website
+<p align="center">
+  <a href="https://dokodocs.com">
+    <img src="assets/logo/logo_dokodocs.svg" width="300" alt="DokoDocs logo">
+  </a>
+</p>
 
-The marketing site for [DokoDocs](https://github.com/dokodocs) — an
-open-source, privacy-first document scanner. Plain HTML/CSS/JS, no build
-step, no framework.
+<h3 align="center">Own Your Documents.</h3>
 
-## Structure
+<p align="center">
+  The official website for <b>DokoDocs</b> — an open-source, privacy-first document scanner<br>
+  and PDF toolkit for Android & iOS. Built with care in Nepal 🇳🇵
+</p>
+
+<p align="center">
+  <a href="https://dokodocs.com"><img src="https://img.shields.io/badge/Website-dokodocs.com-2ea44f?style=for-the-badge" alt="Website"></a>
+  <a href="https://github.com/dokodocs/app"><img src="https://img.shields.io/badge/App%20Source-dokodocs%2Fapp-181717?style=for-the-badge&logo=github" alt="App repository"></a>
+  <a href="https://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/License-Apache%202.0-blue?style=for-the-badge" alt="License: Apache 2.0"></a>
+</p>
+
+<p align="center">
+  <a href="https://dokodocs.com">🌐 Website</a> ·
+  <a href="https://github.com/dokodocs/app">📱 App Repository</a> ·
+  <a href="https://github.com/dokodocs/app/releases">⬇️ Download APK</a> ·
+  <a href="#-about-the-app">Features</a> ·
+  <a href="#-local-development">Develop</a>
+</p>
+
+---
+
+## 📄 About the App
+
+[**DokoDocs**](https://github.com/dokodocs/app) scans, enhances, and exports documents to PDF — with your files staying **on your device by default**. No forced cloud upload, no mandatory account, zero Google Play Services dependency. When you do want to sync, *you* choose the destination: your own server, your own cloud, or nowhere at all.
+
+| | Feature |
+|---|---|
+| 📷 | **Live edge detection** with tap-to-target object selection |
+| ✂️ | Automatic crop & perspective correction, plus a manual editor with draggable corners |
+| ⚡ | One-step **capture-to-PDF** workflow |
+| 🎨 | Enhancement modes: Auto, Magic Color, Professional, Receipt, B&W Text |
+| 📑 | Batch scanning with version history |
+| 🖼️ | Gallery import with HEIC support |
+| 🗓️ | Dual-calendar support (AD & BS dates) |
+| 🔒 | **Local-first storage** — optional sync only where you decide |
+
+**Tech:** Flutter 3.x · Dart · fully native OpenCV vision pipeline · Android 7.0+ / iOS 13.0+
+
+➡️ Get the app: [**github.com/dokodocs/app**](https://github.com/dokodocs/app) — APKs on the [Releases page](https://github.com/dokodocs/app/releases); iOS App Store release in progress.
+
+---
+
+## 🌐 This Repository
+
+This repo holds the marketing site served at [**dokodocs.com**](https://dokodocs.com) — plain HTML/CSS/JS, no build step, no framework.
 
 ```
-index.html          Home page
-privacy.html         Privacy policy
+index.html            Home page
+blog/                 Blog posts
+privacy.html          Privacy policy
 terms.html            Terms of use
-404.html               Not-found page
-css/styles.css          Brand stylesheet (see docs/BrandGuidelines.md)
-js/main.js               Nav toggle, scroll-reveal, active-link highlighting
-assets/                    Logo, icons, illustrations, store badges
-docs/                        Source-of-truth brand & product docs (not deployed)
-robots.txt, sitemap.xml       SEO
+404.html              Not-found page
+css/styles.css        Brand stylesheet (see docs/BrandGuidelines.md)
+js/main.js            Nav toggle, scroll-reveal, active-link highlighting
+assets/               Logo, icons, illustrations, store badges
+docs/                 Source-of-truth brand & product docs (not deployed)
+robots.txt, sitemap.xml   SEO
 ```
 
-## Local development
+## 🛠️ Local Development
 
-No build tooling required — it's static HTML. Serve the folder with any
-static file server, for example:
+No tooling required — it's static HTML. Serve the folder with any static file server:
 
 ```bash
 python -m http.server 8080
 # then open http://localhost:8080
 ```
 
-or the VS Code "Live Server" extension.
+or use the VS Code **Live Server** extension.
 
-## Before going live — placeholders to update
+## 🚀 Deploying
 
-A few values are placeholders pending real accounts/domain (per
-`docs/# DokoDocs Launch Kit.md`, Step 1):
+**GitHub Pages** — Repo → *Settings → Pages* → set the source branch/folder. For a custom domain, add a `CNAME` file containing `dokodocs.com` and point DNS at GitHub Pages.
 
-- **Domain**: all canonical/OG URLs assume `https://dokodocs.com` — update
-  every `<link rel="canonical">`, `og:*`/`twitter:*` meta tag, `robots.txt`,
-  and `sitemap.xml` once the real domain is bought.
-- **Social links**: GitHub/X/Instagram/LinkedIn URLs in the header, footer,
-  and download section use the handles the launch kit recommends
-  (`dokodocs`) — confirm each account was actually claimed before publishing.
-- **Contact email**: `dokodocsnepal@gmail.com` is wired into
-  `privacy.html`, `terms.html`, and the iOS notify form.
-- **Download section**: both store badges are intentionally in a
-  "coming soon" state — the app has no published Play Store or App Store
-  listing yet (see `docs/github readme.txt`, status: MVP in development).
-  Once Google Play publishes, link the Google Play badge directly to the
-  listing URL and drop the "Coming soon" pill.
+**Cloudflare Pages** — connect the repo, leave the build command blank, output directory `/`, deploy.
 
-## Deploying to GitHub Pages
+## 🤝 Community
 
-1. Push this folder to the repo (root, or a `gh-pages` branch/`docs/` folder
-   per your preference).
-2. Repo → **Settings → Pages** → set the source branch/folder.
-3. If deploying as a **project site** (`username.github.io/reponame/`,
-   not a custom domain at root), double-check `404.html`'s relative asset
-   paths still resolve — GitHub Pages serves `404.html` for any unmatched
-   path, and relative URLs resolve against the *requested* path, not the
-   file's own location. Using a custom domain (see below) avoids this.
-4. Optional custom domain: add a `CNAME` file containing just the domain
-   (e.g. `dokodocs.com`), and point the domain's DNS at GitHub Pages per
-   [GitHub's docs](https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site).
+- 🌐 Website: [dokodocs.com](https://dokodocs.com)
+- 💻 App source: [github.com/dokodocs/app](https://github.com/dokodocs/app)
+- 🐦 X / Twitter: [@dokodocs_app](https://x.com/dokodocs_app)
+- ▶️ YouTube: [@dokodocs](https://www.youtube.com/@dokodocs)
+- 📸 Instagram: [@dokodocs](https://instagram.com/dokodocs)
+- 💼 LinkedIn: [dokodocs](https://linkedin.com/company/dokodocs)
 
-## Deploying to Cloudflare Pages
+## 📜 License
 
-1. Connect the repo in the Cloudflare Pages dashboard.
-2. Build command: *(none)* — leave blank.
-3. Build output directory: `/` (repo root).
-4. Deploy. Add a custom domain under the project's **Custom domains** tab
-   once the domain is bought.
+Apache License 2.0, matching the main [DokoDocs app](https://github.com/dokodocs/app) — see [LICENSE](https://www.apache.org/licenses/LICENSE-2.0).
 
-## License
+---
 
-Apache 2.0, matching the main DokoDocs app — see
-[LICENSE](https://www.apache.org/licenses/LICENSE-2.0).
+<p align="center">Made with care in Nepal 🇳🇵</p>
